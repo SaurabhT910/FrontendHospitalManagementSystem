@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Appointment Page</title>
 </head>
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark" >      
+  <a style="color: white;" class="navbar-brand" href="#">MAHALAKSHMI HOSPITALS</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/create-appointment"> Add Appointment</a>
+    </li>
+      <li class="nav-item">
+          <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/admin"> Back to Admin</a>
+      </li>
+    
+    </ul>
+  </div>
+</nav>
+
 <body>
 <div class="container">
      <hr>
@@ -14,7 +32,7 @@
      <hr>
     
 <div class="tableFixHead">
-    <table  class="table table-striped" border="2" margin="5" padding="10px">
+    <table  class="table table-striped "style="background-color: rgb(206, 236, 240)" border="2" margin="5" padding="10px">
         <thead class="table-header">
           <tr class="text-center">
             <th scope="col">ID</th>
@@ -22,10 +40,9 @@
             <th scope="col">AGE</th>
             <th scope="col">SYMTOMS</th>
             <th scope="col">NUMBER</th>
-            
           </tr>
         </thead>
-        <tbody>
+        <tbody border="2">
           <tr *ngFor="let appointment of appointment" class="text-center">
             <td scope="row">{{appointment.id}}</td>
             <td>{{appointment.name}}</td>

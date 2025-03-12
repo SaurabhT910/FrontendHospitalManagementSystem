@@ -13,7 +13,7 @@ export class AppointmentComponent implements OnInit {
   appointment:Appointment[]=[]
   constructor(private appointmentService:AppointmentService){}
   ngOnInit(): void {
-      this.getAppointment();
+    this.getAppointment();
   }
   
   getAppointment(){

@@ -10,9 +10,13 @@ import { Observable } from 'rxjs';
 export class AppointmentService {
 
   constructor(private httpClient:HttpClient) { }
-  private baseUrl="http://localhost:9090/api/v2"
+  private baseUrl="http://localhost:9090/api/v2/appointment"
 
   getAppointmentList():Observable<Appointment[]>{
-    return this.httpClient.get<Appointment[]>(`${this.baseUrl}`)
+    return this.httpClient.get<Appointment[]>(`${this.baseUrl}/all`)
+  }
+
+  createAppointment(appointment:Appointment):Observable<Appointment>{
+    return this.httpClient.post<Appointment>(`${this.baseUrl}/insert`,appointment);
   }
 }
