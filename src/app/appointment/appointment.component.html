@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+     <hr>
+          <h2 style="text-align: center;margin-top: 20PX;color:orange ">Appointment Dashboard</h2>
+          <a style="color: rgb(86, 86, 86); font-size: x-large;"><marquee behavior="scroll" direction="left">
+            Welcome to Appointment Dashboard. Please find the patient list below!!., Click Add Appointment to add new Appointment, Click Update Appointment to Update Appointment</marquee></a>
+     <hr>
+    
+<div class="tableFixHead">
+    <table  class="table table-striped" border="2" margin="5" padding="10px">
+        <thead class="table-header">
+          <tr class="text-center">
+            <th scope="col">ID</th>
+            <th scope="col">NAME</th>
+            <th scope="col">AGE</th>
+            <th scope="col">SYMTOMS</th>
+            <th scope="col">NUMBER</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let appointment of appointment" class="text-center">
+            <td scope="row">{{appointment.id}}</td>
+            <td>{{appointment.name}}</td>
+            <td>{{appointment.age}}</td>
+            <td>{{appointment.symptoms}}</td>
+            <td>{{appointment.number}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+</div>
+</body>
+</html>
