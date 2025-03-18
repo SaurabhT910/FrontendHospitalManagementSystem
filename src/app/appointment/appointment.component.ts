@@ -22,6 +22,14 @@ export class AppointmentComponent implements OnInit {
     })
   }
 
+  delete(id:number){
+    this.appointmentService.deleteAppointment(id).subscribe(data=>{
+      console.log(data);
+      this.getAppointment();
+    })
+  }
+  
+
 }
 
 

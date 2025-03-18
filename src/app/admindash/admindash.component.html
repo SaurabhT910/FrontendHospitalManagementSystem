@@ -20,16 +20,15 @@
 <hr>
 
 <div class="tableFixHead" >
-    <table  class="table table-striped" style="background-color: rgb(206, 236, 240)" border="2" margin="5" padding="10px">
+    <table  class="table table-sm" style="background-color: rgb(206, 236, 240)" border="2" margin="5" padding="10px">
         <thead class="table-header">
           <tr class="text-center">
             <th scope="col">ID</th>
             <th scope="col">NAME</th>
             <th scope="col">AGE</th>
-            <th scope="col">BLOOD GROUP</th>
-            <th scope="col">PRESCRIPTION</th>
-            <th scope="col">DOSE</th>
+            <th scope="col">FEES</th>
             <th scope="col">URGENCY</th>
+            <th scope="col">ACTION</th>
           </tr>
         </thead>
         <tbody>
@@ -37,10 +36,11 @@
             <td scope="row">{{patient.pid}}</td>
             <td>{{patient.pname}}</td>
             <td>{{patient.page}}</td>
-            <td>{{patient.pblood}}</td>
-            <td>{{patient.prescription}}</td>
-            <td>{{patient.pdose}}</td>
+            <td>{{patient.pfees}}</td>
             <td>{{patient.purgency}}</td>
+            <td>
+              <button (click)="delete(patient.pid)" class="btn btn-danger">DELETE</button>
+            </td>
           </tr>
         </tbody>
       </table>

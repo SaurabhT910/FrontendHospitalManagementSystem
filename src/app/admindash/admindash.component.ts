@@ -19,4 +19,11 @@ export class AdmindashComponent implements OnInit{
       this.patient=data;
     })
    }
+
+   delete(pid:number){
+    this.patientService.delete(pid).subscribe(data=>{
+      console.log(data);
+      this.getPatient();
+    })
+   }
 }

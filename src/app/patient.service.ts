@@ -9,9 +9,13 @@ import { Observable } from 'rxjs';
 export class PatientService {
 
   constructor(private httpClient:HttpClient) { }
-  private baseUrl="http://localhost:9090/api/v1"
+  private baseUrl="http://localhost:9090/api/v1/patients"
 
   getPatientList():Observable<Patient[]>{
-    return this.httpClient.get<Patient[]>(`${this.baseUrl}`)
+    return this.httpClient.get<Patient[]>(`${this.baseUrl}/all`)
+  }
+
+  delete(pid:number):Observable<object>{
+      return this.httpClient.delete(`${this.baseUrl}/delete/${pid}`);
   }
 }
