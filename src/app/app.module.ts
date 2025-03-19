@@ -9,6 +9,8 @@ import { AppointmentComponent } from './appointment/appointment.component';
 import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateAppointmentComponent } from './update-appointment/update-appointment.component';
+import { HomeComponent } from './home/home.component';
+import { DoctorDashComponent } from './doctor-dash/doctor-dash.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { UpdateAppointmentComponent } from './update-appointment/update-appointm
     AppointmentComponent,
     CreateAppointmentComponent,
     UpdateAppointmentComponent,
+    HomeComponent,
+    DoctorDashComponent,
   ],
   imports: [
     BrowserModule,
