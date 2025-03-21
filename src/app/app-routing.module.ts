@@ -6,6 +6,8 @@ import { CreateAppointmentComponent } from './create-appointment/create-appointm
 import { UpdateAppointmentComponent } from './update-appointment/update-appointment.component';
 import { HomeComponent } from './home/home.component';
 import { DoctorDashComponent } from './doctor-dash/doctor-dash.component';
+import { AddPatientComponent } from './add-patient/add-patient.component';
+import { MedicineListComponent } from './medicine-list/medicine-list.component';
 
 
 const routes: Routes = [
@@ -15,7 +17,9 @@ const routes: Routes = [
   { path:'create-appointment',component:CreateAppointmentComponent},
   { path:'update-appointment',component:UpdateAppointmentComponent},
   { path: "home",component:HomeComponent},
-  { path:'doctor-dash',component:DoctorDashComponent}
+  { path:'doctor-dash',component:DoctorDashComponent},
+  { path:'create-patient',component:AddPatientComponent},
+  { path:'medicine-list',component:MedicineListComponent}
   
    
 ];
@@ -25,3 +29,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+ 

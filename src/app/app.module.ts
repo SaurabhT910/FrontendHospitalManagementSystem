@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { UpdateAppointmentComponent } from './update-appointment/update-appointment.component';
 import { HomeComponent } from './home/home.component';
 import { DoctorDashComponent } from './doctor-dash/doctor-dash.component';
+import { AddPatientComponent } from './add-patient/add-patient.component';
+import { MedicineListComponent } from './medicine-list/medicine-list.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { DoctorDashComponent } from './doctor-dash/doctor-dash.component';
     UpdateAppointmentComponent,
     HomeComponent,
     DoctorDashComponent,
+    AddPatientComponent,
+    MedicineListComponent,
   ],
   imports: [
     BrowserModule,

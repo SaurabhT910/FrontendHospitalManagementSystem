@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doctor-dash</title>
+</head>
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">      
+    <a style="color: white;" class="navbar-brand" href="#">MAHALAKSHMI HOSPITALS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/doctor-dash"><< Back</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<body>
+    <div class="container">
+        <hr color="red">
+        <h2 class="text-center text-danger" >Add Patient</h2>
+        <hr color="red">
+        <div class="d-flex justify-content-center">
+          <form (ngSubmit)="onSubmit()" #patientForm="ngForm" class=" p-4 rounded shadow" style="width: 100%; 
+          background-color: rgb(206, 236, 240);" novalidate>
+            <div class="form-group row mb-3">
+              <div class="col-md-6">
+                <label for="pname">Name</label>
+                <input type="text" class="form-control" id="pname" name="pname" placeholder="Enter Name"  [(ngModel)]="patient.pname" required #pname="ngModel">
+                <div *ngIf="pname.invalid && pname.touched" class="text-danger">Name is required</div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="page">Age</label>
+                <input type="text" class="form-control" id="page" name="page" placeholder="Enter Age"  [(ngModel)]="patient.page" required #page="ngModel">
+                <div *ngIf="page.invalid && page.touched" class="text-danger">Age is required</div>
+              </div>
+            </div>
+            <div class="form-group row mb-3">
+              <div class="col-md-6">
+                <label for="pblood">Blood Group</label>
+                <input type="text" class="form-control" id="pblood" name="pblood" placeholder="Enter Blood Group" required [(ngModel)]="patient.pblood" required #pblood="ngModel">
+                <div *ngIf="pblood.invalid && pblood.touched" class="text-danger">Blood Group is required</div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="prescription">Prescription</label>
+                <input type="text" class="form-control" id="prescription" name="prescription" placeholder="Enter Prescription" required [(ngModel)]="patient.prescription" required #prescription="ngModel" >
+                <div *ngIf="prescription.invalid && prescription.touched" class="text-danger">Prescription is required</div>
+              </div>
+            </div>
+            <div class="form-group row mb-3">
+                <div class="col-md-6">
+                  <label for="pdose">Dose:</label>
+                  <input type="text" class="form-control" id="pdose" name="pdose" placeholder="Enter Dose" required [(ngModel)]="patient.pdose" required #pdose="ngModel">
+                  <div *ngIf="pdose.invalid && pdose.touched" class="text-danger">Dose Is required</div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="pfees">Fees</label>
+                  <input type="text" class="form-control" id="pfees" name="pfees" placeholder="Enter Fees" required [(ngModel)]="patient.pfees" required #pfees="ngModel" >
+                  <div *ngIf="pfees.invalid && pfees.touched" class="text-danger">Fees is required</div>
+                </div>
+              </div>
+              <div>
+                <div class="form-group col-md-6">
+                    <label for="purgency">Urgency</label>
+                    <input type="text" class="form-control" id="purgency" name="purgency" placeholder="Enter Urgency" required [(ngModel)]="patient.purgency" required #purgency="ngModel" >
+                    <div *ngIf="pfees.invalid && pfees.touched" class="text-danger">Enter Urgency</div>
+                  </div>
+              </div>
+            <div class="form-check mb-3 text-center">
+              <input class="form-check-input" type="checkbox" id="invalidCheck3" required> 
+              <label class="form-check-label" for="invalidCheck3">
+                   Agree to terms and conditions
+              </label>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary  text-center" type="submit" [disabled]="patientForm.invalid">Submit Form</button>
+            </div>
+          </form>
+        </div>
+    </div> 
+</body>
+</html>
