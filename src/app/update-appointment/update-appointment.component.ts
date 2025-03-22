@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Appointment } from '../appointment';
 
 @Component({
   selector: 'app-update-appointment',
@@ -7,10 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './update-appointment.component.css'
 })
 export class UpdateAppointmentComponent {
+  appointment:Appointment=new Appointment();
 onSubmit() {
 throw new Error('Method not implemented.');
 }
-id: any;
-appointment: any;
+  
+
+  
 
 }

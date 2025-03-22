@@ -22,4 +22,10 @@ export class PatientService {
     return this.httpClient.post<Patient>(`${this.baseUrl}/add`,patient)
 
   }
+  getPatinentById(pid:number):Observable<Patient>{
+    return this.httpClient.get<Patient>(`${this.baseUrl}/${pid}`);
+  }
+  updatepatient(pid:number,patient:Patient):Observable<Object>{
+    return this.httpClient.put<Patient>(`${this.baseUrl}/update/${pid}`,patient);
+  }
 }

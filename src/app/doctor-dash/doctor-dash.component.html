@@ -36,9 +36,8 @@
             <th>NAME</th>
             <th>AGE</th>
             <th>BLOOD GROUP</th>
-            <th>PRECRIPTION</th>
-            <th>DOSE</th>
             <th>URGRNCY</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -47,9 +46,11 @@
             <td>{{patient.pname}}</td>
             <td>{{patient.page}}</td>
             <td>{{patient.pblood}}</td>
-            <td>{{patient.prescription}}</td>
-            <td>{{patient.pdose}}</td>
             <td>{{patient.purgency}}</td>
+            <td>
+              <button (click)="delete(patient.pid)" class="btn btn-danger">DELETE</button>&nbsp;&nbsp;
+              <button (click)="update(patient.pid)" class="btn btn-success">UPDATE</button>
+            </td>
         </tr>
     </tbody>
 </table>

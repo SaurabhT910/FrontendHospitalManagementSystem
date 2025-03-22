@@ -14,6 +14,7 @@ import { DoctorDashComponent } from './doctor-dash/doctor-dash.component';
 import { AddPatientComponent } from './add-patient/add-patient.component';
 import { MedicineListComponent } from './medicine-list/medicine-list.component';
 import { AddMedicineComponent } from './add-medicine/add-medicine.component';
+import { UpdatePatinetComponent } from './update-patinet/update-patinet.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AddMedicineComponent } from './add-medicine/add-medicine.component';
     AddPatientComponent,
     MedicineListComponent,
     AddMedicineComponent,
+    UpdatePatinetComponent,
   ],
   imports: [
     BrowserModule,

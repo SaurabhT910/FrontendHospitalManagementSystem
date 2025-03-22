@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppointmentService } from '../appointment.service';
 import { Appointment } from '../appointment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-appointment',
@@ -11,7 +12,7 @@ import { Appointment } from '../appointment';
 export class AppointmentComponent implements OnInit {
 
   appointment:Appointment[]=[]
-  constructor(private appointmentService:AppointmentService){}
+  constructor(private appointmentService:AppointmentService,private router:Router){}
   ngOnInit(): void {
     this.getAppointment();
   }
@@ -28,7 +29,9 @@ export class AppointmentComponent implements OnInit {
       this.getAppointment();
     })
   }
-  
+  update(id:number){
+      this.router.navigate(["update-appointment",id]);
+  }
 
 }
 

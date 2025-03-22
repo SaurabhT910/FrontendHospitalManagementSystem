@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Patient } from '../patient';
 import { PatientService } from '../patient.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-doctor-dash',
@@ -15,7 +16,7 @@ export class DoctorDashComponent implements OnInit{
     this.getPatient();
   }
   
-  constructor(private patientService:PatientService){}
+  constructor(private patientService:PatientService,private router:Router){}
   
 
   getPatient(){
@@ -23,4 +24,13 @@ export class DoctorDashComponent implements OnInit{
        this.patient=data;
     })
   }
+  delete(pid:number){
+    this.patientService.delete(pid).subscribe(data=>{
+      console.log(data);
+      this.getPatient();
+    })
+   }
+   update(pid:number){
+        this.router.navigate(['update-patient',pid])
+   }
 }

@@ -9,6 +9,7 @@ import { DoctorDashComponent } from './doctor-dash/doctor-dash.component';
 import { AddPatientComponent } from './add-patient/add-patient.component';
 import { MedicineListComponent } from './medicine-list/medicine-list.component';
 import { AddMedicineComponent } from './add-medicine/add-medicine.component';
+import { UpdatePatinetComponent } from './update-patinet/update-patinet.component';
 
 
 const routes: Routes = [
@@ -16,12 +17,13 @@ const routes: Routes = [
   { path: 'admin', component: AdmindashComponent },
   { path: 'appointmentlist', component: AppointmentComponent }, // Correct component for appointments
   { path:'create-appointment',component:CreateAppointmentComponent},
-  { path:'update-appointment',component:UpdateAppointmentComponent},
+  { path:'update-appointment/:id',component:UpdateAppointmentComponent},
   { path: "home",component:HomeComponent},
   { path:'doctor-dash',component:DoctorDashComponent},
   { path:'create-patient',component:AddPatientComponent},
   { path:'medicine-list',component:MedicineListComponent},
-  { path:'add-medicine',component:AddMedicineComponent}   
+  { path:'add-medicine',component:AddMedicineComponent},
+  { path:"update-patient/:pid",component:UpdatePatinetComponent}
 ];
 
 @NgModule({

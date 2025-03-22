@@ -53,9 +53,9 @@
             <td>
               <button class="btn btn-danger me-3" (click)="delete(appointment.id)">DELETE</button>
               &nbsp;&nbsp;
-              <a routerLink="/update-appointment">
-                <button class="btn btn-primary btn-sm">UPDATE</button>
-              </a>
+            
+                <button class="btn btn-success"(click)="update(appointment.id)">UPDATE</button>
+              
             </td>
           </tr>
         </tbody>
