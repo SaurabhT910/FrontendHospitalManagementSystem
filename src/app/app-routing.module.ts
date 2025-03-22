@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { DoctorDashComponent } from './doctor-dash/doctor-dash.component';
 import { AddPatientComponent } from './add-patient/add-patient.component';
 import { MedicineListComponent } from './medicine-list/medicine-list.component';
+import { AddMedicineComponent } from './add-medicine/add-medicine.component';
 
 
 const routes: Routes = [
@@ -19,9 +20,8 @@ const routes: Routes = [
   { path: "home",component:HomeComponent},
   { path:'doctor-dash',component:DoctorDashComponent},
   { path:'create-patient',component:AddPatientComponent},
-  { path:'medicine-list',component:MedicineListComponent}
-  
-   
+  { path:'medicine-list',component:MedicineListComponent},
+  { path:'add-medicine',component:AddMedicineComponent}   
 ];
 
 @NgModule({
