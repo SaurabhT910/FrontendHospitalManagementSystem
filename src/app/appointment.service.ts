@@ -23,7 +23,10 @@ export class AppointmentService {
   deleteAppointment(id:number):Observable<object>{
     return this.httpClient.delete(`${this.baseUrl}/delete/${id}`);
   }
-  updateAppointment(id:number, appointment:Appointment):Observable<Appointment>{
+  getAppoinmentById(id:number){
+    return this.httpClient.get<Appointment>(`${this.baseUrl}/${id}`);
+  }
+  updateAppointment(id:number, appointment:Appointment):Observable<Object>{
     return this.httpClient.put<Appointment>(`${this.baseUrl}/update/${id}`,appointment);
   }
 }

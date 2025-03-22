@@ -29,7 +29,7 @@ export class AppointmentComponent implements OnInit {
       this.getAppointment();
     })
   }
-  update(id:number){
+  updateAppointment(id:number){
       this.router.navigate(["update-appointment",id]);
   }
 
