@@ -15,6 +15,7 @@ import { AddPatientComponent } from './add-patient/add-patient.component';
 import { MedicineListComponent } from './medicine-list/medicine-list.component';
 import { AddMedicineComponent } from './add-medicine/add-medicine.component';
 import { UpdatePatinetComponent } from './update-patinet/update-patinet.component';
+import { UpdateMedicineComponent } from './update-medicine/update-medicine.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { UpdatePatinetComponent } from './update-patinet/update-patinet.componen
     MedicineListComponent,
     AddMedicineComponent,
     UpdatePatinetComponent,
+    UpdateMedicineComponent,
   ],
   imports: [
     BrowserModule,

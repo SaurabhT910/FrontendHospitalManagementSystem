@@ -10,6 +10,7 @@ import { AddPatientComponent } from './add-patient/add-patient.component';
 import { MedicineListComponent } from './medicine-list/medicine-list.component';
 import { AddMedicineComponent } from './add-medicine/add-medicine.component';
 import { UpdatePatinetComponent } from './update-patinet/update-patinet.component';
+import { UpdateMedicineComponent } from './update-medicine/update-medicine.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path:'create-patient',component:AddPatientComponent},
   { path:'medicine-list',component:MedicineListComponent},
   { path:'add-medicine',component:AddMedicineComponent},
-  { path:"update-patient/:pid",component:UpdatePatinetComponent}
+  { path:"update-patient/:pid",component:UpdatePatinetComponent},
+  { path:"update-medicine/:id", component:UpdateMedicineComponent}
 ];
 
 @NgModule({
