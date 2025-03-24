@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">      
+    <a style="color: white;" class="navbar-brand" href="#">MAHALAKSHMI HOSPITALS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/doctor-dash"> << Back</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="tableFixHead">
+  <body>
+
+    <div #printSection>
+        <div class="container">
+            <div class="patient-card">
+                <hr color="red">
+                <h2 style="text-align: center; margin-top: 20px; color: orange;">Patient Information</h2>
+                <hr color="red">
+    
+                <table class="table table-bordered" style="background-color: rgb(206, 236, 240); border: 2px solid black;">
+                    <tbody>
+                        <tr><th>ID:</th> <td><b>{{patient.pid}}</b></td></tr>
+                        <tr><th>Name:</th> <td><b>{{patient.pname}}</b></td></tr>
+                        <tr><th>Age:</th> <td><b>{{patient.page}}</b></td></tr>
+                        <tr><th>Blood Group:</th> <td><b>{{patient.pblood}}</b></td></tr>
+                        <tr><th>Prescription:</th> <td><b>{{patient.prescription}}</b></td></tr>
+                        <tr><th>Fees:</th> <td><b>{{patient.pfees}}</b></td></tr>
+                        <tr><th>Dose:</th> <td><b>{{patient.pdose}}</b></td></tr>
+                        <tr><th>Urgency:</th> <td><b>{{patient.purgency}}</b></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="text-center no-print">
+        <button class="btn btn-primary" (click)="printPage()">Print</button>&nbsp;&nbsp;
+        <button class="btn btn-danger" routerLink="/doctor-dash">Close</button>
+    </div>
+    
+    
+
+</body>
+</div>
+</html>

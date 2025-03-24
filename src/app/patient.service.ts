@@ -28,4 +28,5 @@ export class PatientService {
   updatepatient(pid:number,patient:Patient):Observable<Object>{
     return this.httpClient.put<Patient>(`${this.baseUrl}/update/${pid}`,patient);
   }
+  
 }

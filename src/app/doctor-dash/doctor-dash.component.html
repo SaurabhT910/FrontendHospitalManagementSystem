@@ -47,10 +47,20 @@
             <td>{{patient.page}}</td>
             <td>{{patient.pblood}}</td>
             <td>{{patient.purgency}}</td>
-            <td>
-              <button (click)="delete(patient.pid)" class="btn btn-danger">DELETE</button>&nbsp;&nbsp;
-              <button (click)="update(patient.pid)" class="btn btn-success">UPDATE</button>
-            </td>
+            <td class="text-center">
+              <button (click)="delete(patient.pid)" class="btn btn-danger btn-sm">
+                  <i class="fas fa-trash-alt">DELETE</i> 
+              </button>&nbsp;&nbsp;
+          
+              <button (click)="update(patient.pid)" class="btn btn-info btn-sm">
+                  <i class="fas fa-edit"> UPDATE</i>
+              </button>&nbsp;&nbsp;
+          
+              <button (click)="view(patient.pid)" class="btn btn-success btn-sm">
+                  <i class="fas fa-eye">VIEW</i> 
+              </button>
+          </td>
+          
         </tr>
     </tbody>
 </table>

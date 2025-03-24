@@ -33,4 +33,7 @@ export class DoctorDashComponent implements OnInit{
    update(pid:number){
         this.router.navigate(['update-patient',pid])
    }
+   view(pid:number){
+    this.router.navigate(['view-patient',pid]);
+   }
 }
