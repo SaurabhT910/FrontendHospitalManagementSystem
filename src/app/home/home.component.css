@@ -1,0 +1,10 @@
+footer.container {
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+    text-align: center; /* Center align text */
+    padding: 10px 0; /* Add space above and below */
+    position:initial; /* Fix it at the bottom */
+    bottom: 0;
+    width: 100vw;
+    font-size: 10px;
+  }

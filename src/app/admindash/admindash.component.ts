@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PatientService } from '../patient.service';
 import { Patient } from '../patient';
 import { Router } from '@angular/router';
+import { AdminAuthService } from '../admin-auth.service';
 
 @Component({
   selector: 'app-admindash',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class AdmindashComponent implements OnInit{
    patient:Patient[]=[]
-   constructor(private patientService:PatientService, private router:Router){}
+   constructor(private patientService:PatientService, private router:Router,private adminAuthService:AdminAuthService){}
    ngOnInit(): void {
     this.getPatient();
  }
@@ -30,5 +31,9 @@ export class AdmindashComponent implements OnInit{
 
    update(pid:number){
       this.router.navigate(['update-patient',pid])
+   }
+   logout(){
+      this.adminAuthService.isUserLogOut();
+      this.router.navigate(['home']);
    }
 }

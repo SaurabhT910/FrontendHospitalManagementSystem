@@ -13,23 +13,32 @@ import { UpdatePatinetComponent } from './update-patinet/update-patinet.componen
 import { UpdateMedicineComponent } from './update-medicine/update-medicine.component';
 import { ViewPatientComponent } from './view-patient/view-patient.component';
 import { DoctorLoginComponent } from './doctor-login/doctor-login.component';
+import { AdminAuthComponent } from './admin-login/admin-auth.component';
+import { AdminAuthService } from './admin-auth.service';
+import { AdminAuthgurdService } from './admin-authgurd.service';
+import { DoctorAuthgurdService } from './doctor-authgurd.service';
 
 
 const routes: Routes = [
+
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // Default route
-  { path: 'admin', component: AdmindashComponent },
-  { path: 'appointmentlist', component: AppointmentComponent }, // Correct component for appointments
-  { path:'create-appointment',component:CreateAppointmentComponent},
-  { path:'update-appointment/:id',component:UpdateAppointmentComponent},
   { path: "home",component:HomeComponent},
-  { path:'doctor-dash',component:DoctorDashComponent},
-  { path:'create-patient',component:AddPatientComponent},
-  { path:'medicine-list',component:MedicineListComponent},
-  { path:'add-medicine',component:AddMedicineComponent},
-  { path:"update-patient/:pid",component:UpdatePatinetComponent},
-  { path:"update-medicine/:id", component:UpdateMedicineComponent},
-  { path:"view-patient/:pid",component:ViewPatientComponent},
-  { path:"doctor-login",component:DoctorLoginComponent}
+  { path: 'admin', component: AdmindashComponent,canActivate:[AdminAuthgurdService] },
+  { path: 'appointmentlist', component: AppointmentComponent,canActivate:[AdminAuthgurdService] }, // Correct component for appointments
+  { path:'create-appointment',component:CreateAppointmentComponent,canActivate:[AdminAuthgurdService] },
+  { path:'update-appointment/:id',component:UpdateAppointmentComponent,canActivate:[AdminAuthgurdService] },
+ 
+  { path:'doctor-dash',component:DoctorDashComponent,canActivate:[DoctorAuthgurdService]},
+  { path:'create-patient',component:AddPatientComponent,canActivate:[DoctorAuthgurdService]},
+  { path:'medicine-list',component:MedicineListComponent,canActivate:[DoctorAuthgurdService]},
+  { path:'add-medicine',component:AddMedicineComponent,canActivate:[DoctorAuthgurdService]},
+  { path:"update-patient/:pid",component:UpdatePatinetComponent,canActivate:[DoctorAuthgurdService, AdminAuthgurdService]},
+  { path:"update-medicine/:id", component:UpdateMedicineComponent,canActivate:[DoctorAuthgurdService]},
+  { path:"view-patient/:pid",component:ViewPatientComponent,canActivate:[DoctorAuthgurdService]},
+  { path:"doctor-login",component:DoctorLoginComponent},
+  { path:"admin-login",component:AdminAuthComponent}
+
+
 ];
 
 @NgModule({

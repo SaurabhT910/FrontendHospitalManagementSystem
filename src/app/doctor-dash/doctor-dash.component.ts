@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Patient } from '../patient';
 import { PatientService } from '../patient.service';
 import { Router } from '@angular/router';
+import { DoctorAuthService } from '../doctor-auth.service';
 
 @Component({
   selector: 'app-doctor-dash',
@@ -10,13 +11,14 @@ import { Router } from '@angular/router';
   styleUrl: './doctor-dash.component.css'
 })
 export class DoctorDashComponent implements OnInit{
+
   patient:Patient[]=[];
   
   ngOnInit(): void {
     this.getPatient();
   }
   
-  constructor(private patientService:PatientService,private router:Router){}
+  constructor(private patientService:PatientService,private router:Router, private doctorAuthService:DoctorAuthService){}
   
 
   getPatient(){
@@ -36,4 +38,10 @@ export class DoctorDashComponent implements OnInit{
    view(pid:number){
     this.router.navigate(['view-patient',pid]);
    }
+   logout() {
+      
+       this.doctorAuthService.isUserLogOut();
+       this.router.navigate(['home']);
+       
+    }
 }

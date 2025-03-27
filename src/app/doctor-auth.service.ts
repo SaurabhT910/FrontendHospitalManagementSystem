@@ -17,4 +17,17 @@ export class DoctorAuthService {
       return false;
     }
   }
+
+  isUserLoggedIn(){
+    console.log("Doctor Login #####");
+   let user=sessionStorage.getItem("username");
+
+    return !(user==null)
+}
+ isUserLogOut(){
+    console.log("Doctor Logout****");
+    sessionStorage.removeItem('username');
+    return false;
+    
+}
 }

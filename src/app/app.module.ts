@@ -18,6 +18,8 @@ import { UpdatePatinetComponent } from './update-patinet/update-patinet.componen
 import { UpdateMedicineComponent } from './update-medicine/update-medicine.component';
 import { ViewPatientComponent } from './view-patient/view-patient.component';
 import { DoctorLoginComponent } from './doctor-login/doctor-login.component';
+import { AdminAuthComponent } from './admin-login/admin-auth.component';
+
 
 
 @NgModule({
@@ -36,6 +38,7 @@ import { DoctorLoginComponent } from './doctor-login/doctor-login.component';
     UpdateMedicineComponent,
     ViewPatientComponent,
     DoctorLoginComponent,
+    AdminAuthComponent,
   ],
   imports: [
     BrowserModule,
